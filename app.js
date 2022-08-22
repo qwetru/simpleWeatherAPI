@@ -14,7 +14,7 @@ app.get('/', function(req, res){
 app.post('/', function(req, res){
     const city = req.body.city
 
-    https.get(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=51189878d4e292d15fd7d4a953bf8b18&units=metric`, function(response){
+    https.get(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=<api-key>&units=metric`, function(response){
         
     response.on('data', function(data){
         const wheatherData = JSON.parse(data)
